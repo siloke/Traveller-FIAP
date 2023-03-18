@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelho: #D92525;
+    --vermelho-escuro: #591C21;
+    --vermelho-medio: #8C1F28;
+    --verde: #044040;
+    --branco: #F2F2F2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+section {
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 6vmin;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--verde);
+}
+
+h3 {
+    font-size: 3vmin;
+    font-weight: 400;
+    color: var(--verde);
+}
+
+p {
+    font-weight: 300;
+    font-size: 2.5vmin;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/************************ Menu ************************/
+.menu {
+    width: 80%;
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    color: white;
+}
+
+.logo::after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--verde);
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    margin-left: 40px;
+    list-style-type: none;
+}
+
+li a {
+    font-weight: 400;
+    color: var(--branco);
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: var(--vermelho);
+    transition: 0.5s;
+}
+
+/************************ Hero ************************/
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, rgba(4, 7, 2, .2), rgba(4, 7, 2, .9)), url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.redes-sociais {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.icone {
+    font-size: 1.8rem;
+    margin: auto 0;
+    transition: 0.5s;
+}
+
+.icone:hover {
+    color: var(--vermelho);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hero p {
+    margin: 0.3rem 0;
+    color: var(--branco);
+}
+
+.hero h2 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--branco);
+}
+
+.btn {
+    display: inline-block;
+    margin: 2rem 0 0;
+    padding: 1.3rem 2.3rem;
+    background-color: var(--vermelho-medio);
+    font-weight: 500;
+    color: var(--branco);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: var(--branco);
+    color: var(--vermelho-medio);
+    transition: 0.5s;
+}
+
+
+/************************ Cidades ************************/
+
+.cidades {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.cidades h2 {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.cidades h2::after{
+    content: " ";
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin: 1.5rem auto;
+    background-color: var(--verde);
+}
+
+.card {
+    width: 31%;
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--branco);
+}
+
+.card:nth-child(2) {
+    background-image: radial-gradient(rgba(4, 7, 2, .2), rgba(4, 7, 2, .6)), url(../images/newyork.jpg);
+}
+.card:nth-child(3) {
+    background-image: radial-gradient(rgba(4, 7, 2, .2), rgba(4, 7, 2, .6)), url(../images/tokyo.jpg);
+}
+.card:nth-child(4) {
+    background-image: radial-gradient(rgba(4, 7, 2, .2), rgba(4, 7, 2, .6)), url(../images/london.jpg);
+}
+
+/************************ Pontos Turisticos ************************/
+
+.content {
+    width: 45%;
+}
+
+.content p {
+    margin-top: 4vmin;
+    text-align: justify;
+}
+
+.pontos-turisticos-img {
+    width: 45%;
+    height: 50vh;
+    background-image: url(../images/ponte.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/************************ Hotelaria ************************/
+
+.hotel-item {
+    width: 29%;
+    min-height: 50vh;
+    margin-bottom: 5vmin;
+    padding: 2.5vmin;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 20px #ccc;
+    transition: 0.5s;
+}
+
+.hotel-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.hotel-item img {
+    width: 100%;
+    border-bottom: 3px solid var(--vermelho-medio);
+}
+
+.hotel-item h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--vermelho-medio);
+    margin-top: 1vmin;
+}
+
+.local i{
+    font-size: 1rem;
+}
+
+.hotel-item p {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin: 2vmin 0;
+}
+
+.hotel-item a {
+    color: var(--verde);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1vmin 0;
+}
+
+/************************ Footer ************************/
+
+footer {
+    width: 100%;
+    min-height: 40vh;
+    margin-top: 2rem;
+    background-color: var(--verde);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.footer-item {
+    width: 30%;
+}
+
+.footer-item ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-item ul li {
+    margin: 6px 0;
+}
+
+.footer-item ul li a:hover {
+    color: #ccc;
+}
+
+form label {
+    width: 100%;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--branco);
+}
+
+input:focus {
+    outline: none;
+}
+
+form input {
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+input[type=email] {
+    padding: 0 10px;
+}
+
+input[type=submit] {
+    color: #F2F2F2;
+    background-color: var(--vermelho);
+    transition: 0.5s;
+}
+
+input[type=submit]:hover {
+    color: var(--vermelho);
+    background-color: var(--branco);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    font-size: 0.6rem;
+    color: white;
+}
+
+/************************ Parallax ************************/
+
+.parallax-title {
+    color: var(--branco);
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.parallax {
+    width: 100%;
+    height: 30vh;
+    margin: 3rem auto;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-hotelaria { background-image: radial-gradient(rgba(4, 7, 2, .2), rgba(4, 7, 2, .9)), url(../images/hotelaria.jpg);}
+.parallax-pontos { background-image: radial-gradient(rgba(4, 7, 2, .2), rgba(4, 7, 2, .9)), url(../images/paris.jpg); }
+
+
+/************************ Responsivo ************************/
+
+@media (max-width: 1200px) {
+    
+    /* hero */
+
+    .container {
+        width: 90%;
+    }
+
+    .hero>.container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 6vmin;
+    }
+
+    .hero p {
+        font-size: 4vmin;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 20vmin;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* cidades section */
+    .cidades {
+        flex-direction: column;
+        gap: 2rem; 
+    }
+
+    .cidades h2 {
+        font-size: 6vmin;
+        margin-bottom: 0;
+    }
+
+    .cidades h2::after {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* pontos turisticos section */
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .pontos-turisticos-img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    /* hotelaria section */
+
+    .hotel-item {
+        width: 100%;
+    }
+
+    .hotel-item h3 {
+        font-size: 5vmin;
+    }
+    
+    .hotel-item p {
+        font-size: 3vmin;
+    }
+
+    /* footer */
+
+    footer {
+        min-height: 80vh;
+    }
+
+    .footer-item {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .footer-item ul {
+        text-align: justify;
+    }
+
+    form input {
+        padding: 0 10px;
+    }
+
+    /* parallax */
+
+    .parallax {
+        height: 20vh;
+    }
+    .parallax-title {
+        font-size: 6vmin;
+    }
+}
